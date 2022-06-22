@@ -1,0 +1,2 @@
+ram_64_16.v,verilog,xil_defaultlib,../../../../PIS_1.gen/sources_1/ip/ram_64_16/sim/ram_64_16.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

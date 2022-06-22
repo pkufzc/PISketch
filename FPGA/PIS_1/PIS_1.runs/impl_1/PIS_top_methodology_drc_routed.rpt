@@ -1,0 +1,55 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Tue Dec 28 18:44:10 2021
+| Host         : LAPTOP-CK74LVEA running 64-bit major release  (build 9200)
+| Command      : report_methodology -file PIS_top_methodology_drc_routed.rpt -pb PIS_top_methodology_drc_routed.pb -rpx PIS_top_methodology_drc_routed.rpx
+| Design       : PIS_top
+| Device       : xc7vx690tffg1761-2
+| Speed File   : -2
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 4
++-----------+----------+-------------------------------+------------+
+| Rule      | Severity | Description                   | Violations |
++-----------+----------+-------------------------------+------------+
+| TIMING-18 | Warning  | Missing input or output delay | 4          |
++-----------+----------+-------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on KEY_VALUE_ALLMOSTFULL relative to clock(s) SYS_CLK
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on KEY_WR relative to clock(s) SYS_CLK
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An input delay is missing on RESET_N relative to clock(s) SYS_CLK
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An output delay is missing on KEY_ALLMOSTFULL relative to clock(s) SYS_CLK
+Related violations: <none>
+
+

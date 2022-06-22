@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Dec 28 14:20:40 2021
+# Process ID: 14300
+# Current directory: D:/PIS_1/PIS_1.runs/ram_65_16_synth_1
+# Command line: vivado.exe -log ram_65_16.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ram_65_16.tcl
+# Log file: D:/PIS_1/PIS_1.runs/ram_65_16_synth_1/ram_65_16.vds
+# Journal file: D:/PIS_1/PIS_1.runs/ram_65_16_synth_1\vivado.jou
+#-----------------------------------------------------------
+source ram_65_16.tcl -notrace

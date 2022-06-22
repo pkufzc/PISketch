@@ -1,0 +1,1339 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Tue Dec 28 18:44:10 2021
+| Host         : LAPTOP-CK74LVEA running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -file PIS_top_timing_summary_routed.rpt -pb PIS_top_timing_summary_routed.pb -rpx PIS_top_timing_summary_routed.rpx -warn_on_violation
+| Design       : PIS_top
+| Device       : 7vx690t-ffg1761
+| Speed File   : -2  PRODUCTION 1.11 2014-09-11
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (3)
+6. checking no_output_delay (1)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (3)
+------------------------------
+ There are 3 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (1)
+-------------------------------
+ There is 1 port with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      1.943        0.000                      0                   53        0.132        0.000                      0                   53        2.100        0.000                       0                    40  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock    Waveform(ns)         Period(ns)      Frequency(MHz)
+-----    ------------         ----------      --------------
+SYS_CLK  {0.000 2.500}        5.000           200.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+SYS_CLK             1.943        0.000                      0                   53        0.132        0.000                      0                   53        2.100        0.000                       0                    40  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  SYS_CLK
+  To Clock:  SYS_CLK
+
+Setup :            0  Failing Endpoints,  Worst Slack        1.943ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.132ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        2.100ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             1.943ns  (required time - arrival time)
+  Source:                 pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            bloomfilter/count_reg[1]/D
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             SYS_CLK
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (SYS_CLK rise@5.000ns - SYS_CLK rise@0.000ns)
+  Data Path Delay:        3.150ns  (logic 0.603ns (19.145%)  route 2.547ns (80.855%))
+  Logic Levels:           5  (LUT4=1 LUT5=1 LUT6=3)
+  Clock Path Skew:        0.095ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.520ns = ( 9.520 - 5.000 ) 
+    Source Clock Delay      (SCD):    4.686ns
+    Clock Pessimism Removal (CPR):    0.260ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock SYS_CLK rise edge)    0.000     0.000 r  
+    AU28                                              0.000     0.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     0.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.628     0.628 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.272     2.900    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     2.993 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          1.693     4.686    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/SYS_CLK_IBUF_BUFG
+    SLICE_X48Y102        FDCE                                         r  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X48Y102        FDCE (Prop_fdce_C_Q)         0.204     4.890 r  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[1]/Q
+                         net (fo=9, routed)           0.583     5.472    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/Q[1]
+    SLICE_X47Y101        LUT4 (Prop_lut4_I1_O)        0.134     5.606 r  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/check_key_rd_i_5/O
+                         net (fo=2, routed)           0.578     6.184    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/check_key_rd_i_5_n_0
+    SLICE_X48Y101        LUT6 (Prop_lut6_I0_O)        0.136     6.320 f  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/check_key_rd_i_2__0/O
+                         net (fo=3, routed)           0.513     6.832    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/BF_in_value_alf
+    SLICE_X46Y99         LUT5 (Prop_lut5_I2_O)        0.043     6.875 r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/count[2]_i_5/O
+                         net (fo=1, routed)           0.312     7.187    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/count[2]_i_5_n_0
+    SLICE_X45Y100        LUT6 (Prop_lut6_I2_O)        0.043     7.230 r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/count[2]_i_3/O
+                         net (fo=3, routed)           0.562     7.792    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/count
+    SLICE_X45Y99         LUT6 (Prop_lut6_I4_O)        0.043     7.835 r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/count[1]_i_1/O
+                         net (fo=1, routed)           0.000     7.835    bloomfilter/scfifo_64_16_pkt_fifo_n_108
+    SLICE_X45Y99         FDCE                                         r  bloomfilter/count_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock SYS_CLK rise edge)    5.000     5.000 r  
+    AU28                                              0.000     5.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     5.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.521     5.521 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.145     7.666    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083     7.749 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          1.771     9.520    bloomfilter/SYS_CLK_IBUF_BUFG
+    SLICE_X45Y99         FDCE                                         r  bloomfilter/count_reg[1]/C
+                         clock pessimism              0.260     9.781    
+                         clock uncertainty           -0.035     9.745    
+    SLICE_X45Y99         FDCE (Setup_fdce_C_D)        0.033     9.778    bloomfilter/count_reg[1]
+  -------------------------------------------------------------------
+                         required time                          9.778    
+                         arrival time                          -7.835    
+  -------------------------------------------------------------------
+                         slack                                  1.943    
+
+Slack (MET) :             2.029ns  (required time - arrival time)
+  Source:                 pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            bloomfilter/count_reg[0]/D
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             SYS_CLK
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (SYS_CLK rise@5.000ns - SYS_CLK rise@0.000ns)
+  Data Path Delay:        3.096ns  (logic 0.603ns (19.477%)  route 2.493ns (80.523%))
+  Logic Levels:           5  (LUT4=1 LUT5=1 LUT6=3)
+  Clock Path Skew:        0.095ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.520ns = ( 9.520 - 5.000 ) 
+    Source Clock Delay      (SCD):    4.686ns
+    Clock Pessimism Removal (CPR):    0.260ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock SYS_CLK rise edge)    0.000     0.000 r  
+    AU28                                              0.000     0.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     0.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.628     0.628 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.272     2.900    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     2.993 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          1.693     4.686    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/SYS_CLK_IBUF_BUFG
+    SLICE_X48Y102        FDCE                                         r  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X48Y102        FDCE (Prop_fdce_C_Q)         0.204     4.890 r  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[1]/Q
+                         net (fo=9, routed)           0.583     5.472    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/Q[1]
+    SLICE_X47Y101        LUT4 (Prop_lut4_I1_O)        0.134     5.606 r  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/check_key_rd_i_5/O
+                         net (fo=2, routed)           0.578     6.184    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/check_key_rd_i_5_n_0
+    SLICE_X48Y101        LUT6 (Prop_lut6_I0_O)        0.136     6.320 f  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/check_key_rd_i_2__0/O
+                         net (fo=3, routed)           0.513     6.832    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/BF_in_value_alf
+    SLICE_X46Y99         LUT5 (Prop_lut5_I2_O)        0.043     6.875 r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/count[2]_i_5/O
+                         net (fo=1, routed)           0.312     7.187    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/count[2]_i_5_n_0
+    SLICE_X45Y100        LUT6 (Prop_lut6_I2_O)        0.043     7.230 r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/count[2]_i_3/O
+                         net (fo=3, routed)           0.508     7.739    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/count
+    SLICE_X44Y99         LUT6 (Prop_lut6_I4_O)        0.043     7.782 r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/count[0]_i_1/O
+                         net (fo=1, routed)           0.000     7.782    bloomfilter/scfifo_64_16_pkt_fifo_n_107
+    SLICE_X44Y99         FDCE                                         r  bloomfilter/count_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock SYS_CLK rise edge)    5.000     5.000 r  
+    AU28                                              0.000     5.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     5.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.521     5.521 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.145     7.666    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083     7.749 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          1.771     9.520    bloomfilter/SYS_CLK_IBUF_BUFG
+    SLICE_X44Y99         FDCE                                         r  bloomfilter/count_reg[0]/C
+                         clock pessimism              0.260     9.781    
+                         clock uncertainty           -0.035     9.745    
+    SLICE_X44Y99         FDCE (Setup_fdce_C_D)        0.065     9.810    bloomfilter/count_reg[0]
+  -------------------------------------------------------------------
+                         required time                          9.810    
+                         arrival time                          -7.782    
+  -------------------------------------------------------------------
+                         slack                                  2.029    
+
+Slack (MET) :             2.112ns  (required time - arrival time)
+  Source:                 pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            bloomfilter/count_reg[2]/D
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             SYS_CLK
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (SYS_CLK rise@5.000ns - SYS_CLK rise@0.000ns)
+  Data Path Delay:        2.982ns  (logic 0.603ns (20.222%)  route 2.379ns (79.778%))
+  Logic Levels:           5  (LUT3=1 LUT4=1 LUT5=1 LUT6=2)
+  Clock Path Skew:        0.095ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.520ns = ( 9.520 - 5.000 ) 
+    Source Clock Delay      (SCD):    4.686ns
+    Clock Pessimism Removal (CPR):    0.260ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock SYS_CLK rise edge)    0.000     0.000 r  
+    AU28                                              0.000     0.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     0.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.628     0.628 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.272     2.900    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     2.993 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          1.693     4.686    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/SYS_CLK_IBUF_BUFG
+    SLICE_X48Y102        FDCE                                         r  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X48Y102        FDCE (Prop_fdce_C_Q)         0.204     4.890 r  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[1]/Q
+                         net (fo=9, routed)           0.583     5.472    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/Q[1]
+    SLICE_X47Y101        LUT4 (Prop_lut4_I1_O)        0.134     5.606 r  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/check_key_rd_i_5/O
+                         net (fo=2, routed)           0.578     6.184    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/check_key_rd_i_5_n_0
+    SLICE_X48Y101        LUT6 (Prop_lut6_I0_O)        0.136     6.320 f  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/check_key_rd_i_2__0/O
+                         net (fo=3, routed)           0.513     6.832    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/BF_in_value_alf
+    SLICE_X46Y99         LUT5 (Prop_lut5_I2_O)        0.043     6.875 r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/count[2]_i_5/O
+                         net (fo=1, routed)           0.312     7.187    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/count[2]_i_5_n_0
+    SLICE_X45Y100        LUT6 (Prop_lut6_I2_O)        0.043     7.230 r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/count[2]_i_3/O
+                         net (fo=3, routed)           0.394     7.625    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/count
+    SLICE_X45Y99         LUT3 (Prop_lut3_I1_O)        0.043     7.668 r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/count[2]_i_1/O
+                         net (fo=1, routed)           0.000     7.668    bloomfilter/scfifo_64_16_pkt_fifo_n_109
+    SLICE_X45Y99         FDCE                                         r  bloomfilter/count_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock SYS_CLK rise edge)    5.000     5.000 r  
+    AU28                                              0.000     5.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     5.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.521     5.521 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.145     7.666    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083     7.749 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          1.771     9.520    bloomfilter/SYS_CLK_IBUF_BUFG
+    SLICE_X45Y99         FDCE                                         r  bloomfilter/count_reg[2]/C
+                         clock pessimism              0.260     9.781    
+                         clock uncertainty           -0.035     9.745    
+    SLICE_X45Y99         FDCE (Setup_fdce_C_D)        0.034     9.779    bloomfilter/count_reg[2]
+  -------------------------------------------------------------------
+                         required time                          9.779    
+                         arrival time                          -7.668    
+  -------------------------------------------------------------------
+                         slack                                  2.112    
+
+Slack (MET) :             2.544ns  (required time - arrival time)
+  Source:                 pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            pi_sketch/check_key_rd_reg/D
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             SYS_CLK
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (SYS_CLK rise@5.000ns - SYS_CLK rise@0.000ns)
+  Data Path Delay:        2.212ns  (logic 0.522ns (23.603%)  route 1.690ns (76.397%))
+  Logic Levels:           3  (LUT4=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.098ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.301ns = ( 9.301 - 5.000 ) 
+    Source Clock Delay      (SCD):    4.733ns
+    Clock Pessimism Removal (CPR):    0.333ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock SYS_CLK rise edge)    0.000     0.000 r  
+    AU28                                              0.000     0.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     0.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.628     0.628 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.272     2.900    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     2.993 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          1.740     4.733    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/SYS_CLK_IBUF_BUFG
+    SLICE_X47Y102        FDCE                                         r  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X47Y102        FDCE (Prop_fdce_C_Q)         0.204     4.937 f  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[1]/Q
+                         net (fo=9, routed)           0.462     5.399    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg_n_0_[1]
+    SLICE_X46Y101        LUT4 (Prop_lut4_I2_O)        0.134     5.533 r  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/check_key_rd_i_6/O
+                         net (fo=2, routed)           0.491     6.023    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/check_key_rd_i_6_n_0
+    SLICE_X48Y101        LUT6 (Prop_lut6_I2_O)        0.138     6.161 r  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/FSM_sequential_lookup_state[2]_i_2__0/O
+                         net (fo=7, routed)           0.540     6.701    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/FSM_sequential_lookup_state[2]_i_2__0_n_0
+    SLICE_X50Y100        LUT5 (Prop_lut5_I0_O)        0.046     6.747 r  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/check_key_rd_i_2/O
+                         net (fo=1, routed)           0.197     6.944    pi_sketch/check_key_rd
+    SLICE_X49Y101        FDCE                                         r  pi_sketch/check_key_rd_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock SYS_CLK rise edge)    5.000     5.000 r  
+    AU28                                              0.000     5.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     5.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.521     5.521 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.145     7.666    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083     7.749 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          1.552     9.301    pi_sketch/SYS_CLK_IBUF_BUFG
+    SLICE_X49Y101        FDCE                                         r  pi_sketch/check_key_rd_reg/C
+                         clock pessimism              0.333     9.635    
+                         clock uncertainty           -0.035     9.599    
+    SLICE_X49Y101        FDCE (Setup_fdce_C_D)       -0.111     9.488    pi_sketch/check_key_rd_reg
+  -------------------------------------------------------------------
+                         required time                          9.488    
+                         arrival time                          -6.944    
+  -------------------------------------------------------------------
+                         slack                                  2.544    
+
+Slack (MET) :             2.556ns  (required time - arrival time)
+  Source:                 pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            bloomfilter/FSM_sequential_lookup_state_reg[0]/D
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             SYS_CLK
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (SYS_CLK rise@5.000ns - SYS_CLK rise@0.000ns)
+  Data Path Delay:        2.537ns  (logic 0.560ns (22.075%)  route 1.977ns (77.925%))
+  Logic Levels:           4  (LUT4=1 LUT5=1 LUT6=2)
+  Clock Path Skew:        0.094ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.519ns = ( 9.519 - 5.000 ) 
+    Source Clock Delay      (SCD):    4.686ns
+    Clock Pessimism Removal (CPR):    0.260ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock SYS_CLK rise edge)    0.000     0.000 r  
+    AU28                                              0.000     0.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     0.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.628     0.628 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.272     2.900    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     2.993 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          1.693     4.686    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/SYS_CLK_IBUF_BUFG
+    SLICE_X48Y102        FDCE                                         r  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X48Y102        FDCE (Prop_fdce_C_Q)         0.204     4.890 r  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[1]/Q
+                         net (fo=9, routed)           0.583     5.472    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/Q[1]
+    SLICE_X47Y101        LUT4 (Prop_lut4_I1_O)        0.134     5.606 r  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/check_key_rd_i_5/O
+                         net (fo=2, routed)           0.578     6.184    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/check_key_rd_i_5_n_0
+    SLICE_X48Y101        LUT6 (Prop_lut6_I0_O)        0.136     6.320 f  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/check_key_rd_i_2__0/O
+                         net (fo=3, routed)           0.585     6.905    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/BF_in_value_alf
+    SLICE_X47Y99         LUT6 (Prop_lut6_I2_O)        0.043     6.948 r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/FSM_sequential_lookup_state[0]_i_2/O
+                         net (fo=1, routed)           0.232     7.179    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/FSM_sequential_lookup_state[0]_i_2_n_0
+    SLICE_X47Y99         LUT5 (Prop_lut5_I0_O)        0.043     7.222 r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/FSM_sequential_lookup_state[0]_i_1/O
+                         net (fo=1, routed)           0.000     7.222    bloomfilter/lookup_state__0[0]
+    SLICE_X47Y99         FDCE                                         r  bloomfilter/FSM_sequential_lookup_state_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock SYS_CLK rise edge)    5.000     5.000 r  
+    AU28                                              0.000     5.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     5.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.521     5.521 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.145     7.666    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083     7.749 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          1.770     9.519    bloomfilter/SYS_CLK_IBUF_BUFG
+    SLICE_X47Y99         FDCE                                         r  bloomfilter/FSM_sequential_lookup_state_reg[0]/C
+                         clock pessimism              0.260     9.780    
+                         clock uncertainty           -0.035     9.744    
+    SLICE_X47Y99         FDCE (Setup_fdce_C_D)        0.034     9.778    bloomfilter/FSM_sequential_lookup_state_reg[0]
+  -------------------------------------------------------------------
+                         required time                          9.778    
+                         arrival time                          -7.222    
+  -------------------------------------------------------------------
+                         slack                                  2.556    
+
+Slack (MET) :             2.588ns  (required time - arrival time)
+  Source:                 pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            pi_sketch/count_reg[1]/D
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             SYS_CLK
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (SYS_CLK rise@5.000ns - SYS_CLK rise@0.000ns)
+  Data Path Delay:        2.312ns  (logic 0.668ns (28.890%)  route 1.644ns (71.110%))
+  Logic Levels:           4  (LUT4=2 LUT6=2)
+  Clock Path Skew:        -0.098ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.301ns = ( 9.301 - 5.000 ) 
+    Source Clock Delay      (SCD):    4.733ns
+    Clock Pessimism Removal (CPR):    0.333ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock SYS_CLK rise edge)    0.000     0.000 r  
+    AU28                                              0.000     0.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     0.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.628     0.628 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.272     2.900    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     2.993 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          1.740     4.733    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/SYS_CLK_IBUF_BUFG
+    SLICE_X47Y102        FDCE                                         r  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X47Y102        FDCE (Prop_fdce_C_Q)         0.204     4.937 f  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[1]/Q
+                         net (fo=9, routed)           0.462     5.399    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg_n_0_[1]
+    SLICE_X46Y101        LUT4 (Prop_lut4_I2_O)        0.134     5.533 r  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/check_key_rd_i_6/O
+                         net (fo=2, routed)           0.491     6.023    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/check_key_rd_i_6_n_0
+    SLICE_X48Y101        LUT6 (Prop_lut6_I2_O)        0.138     6.161 f  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/FSM_sequential_lookup_state[2]_i_2__0/O
+                         net (fo=7, routed)           0.328     6.489    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/FSM_sequential_lookup_state[2]_i_2__0_n_0
+    SLICE_X49Y100        LUT4 (Prop_lut4_I3_O)        0.055     6.544 r  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/count[2]_i_3__0/O
+                         net (fo=2, routed)           0.364     6.908    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/count[2]_i_3__0_n_0
+    SLICE_X49Y100        LUT6 (Prop_lut6_I2_O)        0.137     7.045 r  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/count[1]_i_1__0/O
+                         net (fo=1, routed)           0.000     7.045    pi_sketch/scfifo_65_16_pkt_fifo_n_24
+    SLICE_X49Y100        FDCE                                         r  pi_sketch/count_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock SYS_CLK rise edge)    5.000     5.000 r  
+    AU28                                              0.000     5.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     5.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.521     5.521 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.145     7.666    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083     7.749 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          1.552     9.301    pi_sketch/SYS_CLK_IBUF_BUFG
+    SLICE_X49Y100        FDCE                                         r  pi_sketch/count_reg[1]/C
+                         clock pessimism              0.333     9.635    
+                         clock uncertainty           -0.035     9.599    
+    SLICE_X49Y100        FDCE (Setup_fdce_C_D)        0.034     9.633    pi_sketch/count_reg[1]
+  -------------------------------------------------------------------
+                         required time                          9.633    
+                         arrival time                          -7.045    
+  -------------------------------------------------------------------
+                         slack                                  2.588    
+
+Slack (MET) :             2.676ns  (required time - arrival time)
+  Source:                 pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            pi_sketch/count_reg[2]/D
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             SYS_CLK
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (SYS_CLK rise@5.000ns - SYS_CLK rise@0.000ns)
+  Data Path Delay:        2.224ns  (logic 0.668ns (30.030%)  route 1.556ns (69.970%))
+  Logic Levels:           4  (LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.098ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.301ns = ( 9.301 - 5.000 ) 
+    Source Clock Delay      (SCD):    4.733ns
+    Clock Pessimism Removal (CPR):    0.333ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock SYS_CLK rise edge)    0.000     0.000 r  
+    AU28                                              0.000     0.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     0.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.628     0.628 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.272     2.900    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     2.993 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          1.740     4.733    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/SYS_CLK_IBUF_BUFG
+    SLICE_X47Y102        FDCE                                         r  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X47Y102        FDCE (Prop_fdce_C_Q)         0.204     4.937 f  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[1]/Q
+                         net (fo=9, routed)           0.462     5.399    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg_n_0_[1]
+    SLICE_X46Y101        LUT4 (Prop_lut4_I2_O)        0.134     5.533 r  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/check_key_rd_i_6/O
+                         net (fo=2, routed)           0.491     6.023    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/check_key_rd_i_6_n_0
+    SLICE_X48Y101        LUT6 (Prop_lut6_I2_O)        0.138     6.161 f  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/FSM_sequential_lookup_state[2]_i_2__0/O
+                         net (fo=7, routed)           0.328     6.489    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/FSM_sequential_lookup_state[2]_i_2__0_n_0
+    SLICE_X49Y100        LUT4 (Prop_lut4_I3_O)        0.055     6.544 r  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/count[2]_i_3__0/O
+                         net (fo=2, routed)           0.276     6.820    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/count[2]_i_3__0_n_0
+    SLICE_X48Y100        LUT5 (Prop_lut5_I1_O)        0.137     6.957 r  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/count[2]_i_1__0/O
+                         net (fo=1, routed)           0.000     6.957    pi_sketch/scfifo_65_16_pkt_fifo_n_23
+    SLICE_X48Y100        FDCE                                         r  pi_sketch/count_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock SYS_CLK rise edge)    5.000     5.000 r  
+    AU28                                              0.000     5.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     5.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.521     5.521 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.145     7.666    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083     7.749 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          1.552     9.301    pi_sketch/SYS_CLK_IBUF_BUFG
+    SLICE_X48Y100        FDCE                                         r  pi_sketch/count_reg[2]/C
+                         clock pessimism              0.333     9.635    
+                         clock uncertainty           -0.035     9.599    
+    SLICE_X48Y100        FDCE (Setup_fdce_C_D)        0.034     9.633    pi_sketch/count_reg[2]
+  -------------------------------------------------------------------
+                         required time                          9.633    
+                         arrival time                          -6.957    
+  -------------------------------------------------------------------
+                         slack                                  2.676    
+
+Slack (MET) :             2.739ns  (required time - arrival time)
+  Source:                 pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            bloomfilter/check_key_rd_reg/D
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             SYS_CLK
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (SYS_CLK rise@5.000ns - SYS_CLK rise@0.000ns)
+  Data Path Delay:        2.384ns  (logic 0.517ns (21.687%)  route 1.867ns (78.313%))
+  Logic Levels:           3  (LUT4=1 LUT6=2)
+  Clock Path Skew:        0.094ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.519ns = ( 9.519 - 5.000 ) 
+    Source Clock Delay      (SCD):    4.686ns
+    Clock Pessimism Removal (CPR):    0.260ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock SYS_CLK rise edge)    0.000     0.000 r  
+    AU28                                              0.000     0.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     0.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.628     0.628 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.272     2.900    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     2.993 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          1.693     4.686    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/SYS_CLK_IBUF_BUFG
+    SLICE_X48Y102        FDCE                                         r  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X48Y102        FDCE (Prop_fdce_C_Q)         0.204     4.890 r  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[1]/Q
+                         net (fo=9, routed)           0.583     5.472    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/Q[1]
+    SLICE_X47Y101        LUT4 (Prop_lut4_I1_O)        0.134     5.606 r  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/check_key_rd_i_5/O
+                         net (fo=2, routed)           0.578     6.184    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/check_key_rd_i_5_n_0
+    SLICE_X48Y101        LUT6 (Prop_lut6_I0_O)        0.136     6.320 f  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/check_key_rd_i_2__0/O
+                         net (fo=3, routed)           0.707     7.027    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/BF_in_value_alf
+    SLICE_X46Y99         LUT6 (Prop_lut6_I0_O)        0.043     7.070 r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/check_key_rd_i_1/O
+                         net (fo=1, routed)           0.000     7.070    bloomfilter/check_key_rd
+    SLICE_X46Y99         FDCE                                         r  bloomfilter/check_key_rd_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock SYS_CLK rise edge)    5.000     5.000 r  
+    AU28                                              0.000     5.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     5.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.521     5.521 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.145     7.666    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083     7.749 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          1.770     9.519    bloomfilter/SYS_CLK_IBUF_BUFG
+    SLICE_X46Y99         FDCE                                         r  bloomfilter/check_key_rd_reg/C
+                         clock pessimism              0.260     9.780    
+                         clock uncertainty           -0.035     9.744    
+    SLICE_X46Y99         FDCE (Setup_fdce_C_D)        0.064     9.808    bloomfilter/check_key_rd_reg
+  -------------------------------------------------------------------
+                         required time                          9.808    
+                         arrival time                          -7.070    
+  -------------------------------------------------------------------
+                         slack                                  2.739    
+
+Slack (MET) :             2.980ns  (required time - arrival time)
+  Source:                 bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[0]/CE
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             SYS_CLK
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (SYS_CLK rise@5.000ns - SYS_CLK rise@0.000ns)
+  Data Path Delay:        1.854ns  (logic 0.405ns (21.847%)  route 1.449ns (78.153%))
+  Logic Levels:           2  (LUT6=2)
+  Clock Path Skew:        0.047ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.519ns = ( 9.519 - 5.000 ) 
+    Source Clock Delay      (SCD):    4.733ns
+    Clock Pessimism Removal (CPR):    0.260ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock SYS_CLK rise edge)    0.000     0.000 r  
+    AU28                                              0.000     0.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     0.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.628     0.628 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.272     2.900    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     2.993 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          1.740     4.733    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/SYS_CLK_IBUF_BUFG
+    SLICE_X46Y100        FDCE                                         r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X46Y100        FDCE (Prop_fdce_C_Q)         0.236     4.969 r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[2]/Q
+                         net (fo=6, routed)           0.546     5.515    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg_n_0_[2]
+    SLICE_X47Y99         LUT6 (Prop_lut6_I0_O)        0.126     5.641 f  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/ram_64_16_pkt0_i_7/O
+                         net (fo=2, routed)           0.440     6.081    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/ram_64_16_pkt0_i_7_n_0
+    SLICE_X47Y98         LUT6 (Prop_lut6_I5_O)        0.043     6.124 r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/ram_64_16_pkt0_i_1/O
+                         net (fo=5, routed)           0.462     6.586    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/crcvalid_reg[0]
+    SLICE_X46Y98         FDCE                                         r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[0]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock SYS_CLK rise edge)    5.000     5.000 r  
+    AU28                                              0.000     5.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     5.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.521     5.521 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.145     7.666    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083     7.749 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          1.770     9.519    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/SYS_CLK_IBUF_BUFG
+    SLICE_X46Y98         FDCE                                         r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[0]/C
+                         clock pessimism              0.260     9.780    
+                         clock uncertainty           -0.035     9.744    
+    SLICE_X46Y98         FDCE (Setup_fdce_C_CE)      -0.178     9.566    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[0]
+  -------------------------------------------------------------------
+                         required time                          9.566    
+                         arrival time                          -6.586    
+  -------------------------------------------------------------------
+                         slack                                  2.980    
+
+Slack (MET) :             2.980ns  (required time - arrival time)
+  Source:                 bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[1]/CE
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             SYS_CLK
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (SYS_CLK rise@5.000ns - SYS_CLK rise@0.000ns)
+  Data Path Delay:        1.854ns  (logic 0.405ns (21.847%)  route 1.449ns (78.153%))
+  Logic Levels:           2  (LUT6=2)
+  Clock Path Skew:        0.047ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.519ns = ( 9.519 - 5.000 ) 
+    Source Clock Delay      (SCD):    4.733ns
+    Clock Pessimism Removal (CPR):    0.260ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock SYS_CLK rise edge)    0.000     0.000 r  
+    AU28                                              0.000     0.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     0.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.628     0.628 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.272     2.900    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     2.993 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          1.740     4.733    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/SYS_CLK_IBUF_BUFG
+    SLICE_X46Y100        FDCE                                         r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X46Y100        FDCE (Prop_fdce_C_Q)         0.236     4.969 r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[2]/Q
+                         net (fo=6, routed)           0.546     5.515    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg_n_0_[2]
+    SLICE_X47Y99         LUT6 (Prop_lut6_I0_O)        0.126     5.641 f  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/ram_64_16_pkt0_i_7/O
+                         net (fo=2, routed)           0.440     6.081    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/ram_64_16_pkt0_i_7_n_0
+    SLICE_X47Y98         LUT6 (Prop_lut6_I5_O)        0.043     6.124 r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/ram_64_16_pkt0_i_1/O
+                         net (fo=5, routed)           0.462     6.586    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/crcvalid_reg[0]
+    SLICE_X46Y98         FDCE                                         r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[1]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock SYS_CLK rise edge)    5.000     5.000 r  
+    AU28                                              0.000     5.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     5.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.521     5.521 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.145     7.666    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083     7.749 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          1.770     9.519    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/SYS_CLK_IBUF_BUFG
+    SLICE_X46Y98         FDCE                                         r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[1]/C
+                         clock pessimism              0.260     9.780    
+                         clock uncertainty           -0.035     9.744    
+    SLICE_X46Y98         FDCE (Setup_fdce_C_CE)      -0.178     9.566    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[1]
+  -------------------------------------------------------------------
+                         required time                          9.566    
+                         arrival time                          -6.586    
+  -------------------------------------------------------------------
+                         slack                                  2.980    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.132ns  (arrival time - required time)
+  Source:                 bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[4]/D
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             SYS_CLK
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (SYS_CLK rise@0.000ns - SYS_CLK rise@0.000ns)
+  Data Path Delay:        0.239ns  (logic 0.130ns (54.286%)  route 0.109ns (45.714%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.011ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.468ns
+    Source Clock Delay      (SCD):    1.982ns
+    Clock Pessimism Removal (CPR):    0.474ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock SYS_CLK rise edge)    0.000     0.000 r  
+    AU28                                              0.000     0.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     0.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.134     0.134 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.067     1.201    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.227 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          0.755     1.982    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/SYS_CLK_IBUF_BUFG
+    SLICE_X47Y100        FDCE                                         r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X47Y100        FDCE (Prop_fdce_C_Q)         0.100     2.082 r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[0]/Q
+                         net (fo=8, routed)           0.109     2.192    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg_n_0_[0]
+    SLICE_X46Y100        LUT5 (Prop_lut5_I2_O)        0.030     2.222 r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr[4]_i_2/O
+                         net (fo=1, routed)           0.000     2.222    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr[4]_i_2_n_0
+    SLICE_X46Y100        FDCE                                         r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock SYS_CLK rise edge)    0.000     0.000 r  
+    AU28                                              0.000     0.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     0.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.301     0.301 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.139     1.440    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.470 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          0.998     2.468    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/SYS_CLK_IBUF_BUFG
+    SLICE_X46Y100        FDCE                                         r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[4]/C
+                         clock pessimism             -0.474     1.993    
+    SLICE_X46Y100        FDCE (Hold_fdce_C_D)         0.096     2.089    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[4]
+  -------------------------------------------------------------------
+                         required time                         -2.089    
+                         arrival time                           2.222    
+  -------------------------------------------------------------------
+                         slack                                  0.132    
+
+Slack (MET) :             0.139ns  (arrival time - required time)
+  Source:                 bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[3]/D
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             SYS_CLK
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (SYS_CLK rise@0.000ns - SYS_CLK rise@0.000ns)
+  Data Path Delay:        0.237ns  (logic 0.128ns (53.901%)  route 0.109ns (46.099%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.011ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.468ns
+    Source Clock Delay      (SCD):    1.982ns
+    Clock Pessimism Removal (CPR):    0.474ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock SYS_CLK rise edge)    0.000     0.000 r  
+    AU28                                              0.000     0.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     0.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.134     0.134 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.067     1.201    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.227 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          0.755     1.982    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/SYS_CLK_IBUF_BUFG
+    SLICE_X47Y100        FDCE                                         r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X47Y100        FDCE (Prop_fdce_C_Q)         0.100     2.082 r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[0]/Q
+                         net (fo=8, routed)           0.109     2.192    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg_n_0_[0]
+    SLICE_X46Y100        LUT4 (Prop_lut4_I2_O)        0.028     2.220 r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr[3]_i_1/O
+                         net (fo=1, routed)           0.000     2.220    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr[3]_i_1_n_0
+    SLICE_X46Y100        FDCE                                         r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock SYS_CLK rise edge)    0.000     0.000 r  
+    AU28                                              0.000     0.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     0.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.301     0.301 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.139     1.440    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.470 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          0.998     2.468    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/SYS_CLK_IBUF_BUFG
+    SLICE_X46Y100        FDCE                                         r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[3]/C
+                         clock pessimism             -0.474     1.993    
+    SLICE_X46Y100        FDCE (Hold_fdce_C_D)         0.087     2.080    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -2.080    
+                         arrival time                           2.220    
+  -------------------------------------------------------------------
+                         slack                                  0.139    
+
+Slack (MET) :             0.141ns  (arrival time - required time)
+  Source:                 bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[1]/D
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             SYS_CLK
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (SYS_CLK rise@0.000ns - SYS_CLK rise@0.000ns)
+  Data Path Delay:        0.239ns  (logic 0.128ns (53.451%)  route 0.111ns (46.549%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.011ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.468ns
+    Source Clock Delay      (SCD):    1.982ns
+    Clock Pessimism Removal (CPR):    0.474ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock SYS_CLK rise edge)    0.000     0.000 r  
+    AU28                                              0.000     0.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     0.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.134     0.134 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.067     1.201    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.227 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          0.755     1.982    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/SYS_CLK_IBUF_BUFG
+    SLICE_X47Y100        FDCE                                         r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X47Y100        FDCE (Prop_fdce_C_Q)         0.100     2.082 r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[0]/Q
+                         net (fo=8, routed)           0.111     2.194    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg_n_0_[0]
+    SLICE_X46Y100        LUT2 (Prop_lut2_I1_O)        0.028     2.222 r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr[1]_i_1/O
+                         net (fo=1, routed)           0.000     2.222    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr[1]_i_1_n_0
+    SLICE_X46Y100        FDCE                                         r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock SYS_CLK rise edge)    0.000     0.000 r  
+    AU28                                              0.000     0.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     0.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.301     0.301 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.139     1.440    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.470 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          0.998     2.468    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/SYS_CLK_IBUF_BUFG
+    SLICE_X46Y100        FDCE                                         r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[1]/C
+                         clock pessimism             -0.474     1.993    
+    SLICE_X46Y100        FDCE (Hold_fdce_C_D)         0.087     2.080    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -2.080    
+                         arrival time                           2.222    
+  -------------------------------------------------------------------
+                         slack                                  0.141    
+
+Slack (MET) :             0.168ns  (arrival time - required time)
+  Source:                 bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/Empty_reg_reg/C
+                            (rising edge-triggered cell FDPE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            bloomfilter/check_key_rd_reg/D
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             SYS_CLK
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (SYS_CLK rise@0.000ns - SYS_CLK rise@0.000ns)
+  Data Path Delay:        0.266ns  (logic 0.128ns (48.034%)  route 0.138ns (51.966%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.011ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.540ns
+    Source Clock Delay      (SCD):    2.034ns
+    Clock Pessimism Removal (CPR):    0.494ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock SYS_CLK rise edge)    0.000     0.000 r  
+    AU28                                              0.000     0.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     0.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.134     0.134 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.067     1.201    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.227 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          0.807     2.034    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/SYS_CLK_IBUF_BUFG
+    SLICE_X47Y99         FDPE                                         r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/Empty_reg_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X47Y99         FDPE (Prop_fdpe_C_Q)         0.100     2.134 f  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/Empty_reg_reg/Q
+                         net (fo=3, routed)           0.138     2.273    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/Empty_reg
+    SLICE_X46Y99         LUT6 (Prop_lut6_I1_O)        0.028     2.301 r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/check_key_rd_i_1/O
+                         net (fo=1, routed)           0.000     2.301    bloomfilter/check_key_rd
+    SLICE_X46Y99         FDCE                                         r  bloomfilter/check_key_rd_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock SYS_CLK rise edge)    0.000     0.000 r  
+    AU28                                              0.000     0.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     0.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.301     0.301 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.139     1.440    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.470 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          1.070     2.540    bloomfilter/SYS_CLK_IBUF_BUFG
+    SLICE_X46Y99         FDCE                                         r  bloomfilter/check_key_rd_reg/C
+                         clock pessimism             -0.494     2.045    
+    SLICE_X46Y99         FDCE (Hold_fdce_C_D)         0.087     2.132    bloomfilter/check_key_rd_reg
+  -------------------------------------------------------------------
+                         required time                         -2.132    
+                         arrival time                           2.301    
+  -------------------------------------------------------------------
+                         slack                                  0.168    
+
+Slack (MET) :             0.170ns  (arrival time - required time)
+  Source:                 bloomfilter/FSM_sequential_lookup_state_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            bloomfilter/FSM_sequential_lookup_state_reg[2]/D
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             SYS_CLK
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (SYS_CLK rise@0.000ns - SYS_CLK rise@0.000ns)
+  Data Path Delay:        0.374ns  (logic 0.128ns (34.223%)  route 0.246ns (65.777%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.144ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.469ns
+    Source Clock Delay      (SCD):    2.034ns
+    Clock Pessimism Removal (CPR):    0.290ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock SYS_CLK rise edge)    0.000     0.000 r  
+    AU28                                              0.000     0.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     0.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.134     0.134 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.067     1.201    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.227 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          0.807     2.034    bloomfilter/SYS_CLK_IBUF_BUFG
+    SLICE_X47Y99         FDCE                                         r  bloomfilter/FSM_sequential_lookup_state_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X47Y99         FDCE (Prop_fdce_C_Q)         0.100     2.134 r  bloomfilter/FSM_sequential_lookup_state_reg[0]/Q
+                         net (fo=15, routed)          0.246     2.380    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/ram2_addr_reg[2]_rep[0]
+    SLICE_X45Y100        LUT5 (Prop_lut5_I1_O)        0.028     2.408 r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/FSM_sequential_lookup_state[2]_i_1/O
+                         net (fo=1, routed)           0.000     2.408    bloomfilter/lookup_state__0[2]
+    SLICE_X45Y100        FDCE                                         r  bloomfilter/FSM_sequential_lookup_state_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock SYS_CLK rise edge)    0.000     0.000 r  
+    AU28                                              0.000     0.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     0.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.301     0.301 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.139     1.440    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.470 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          0.999     2.469    bloomfilter/SYS_CLK_IBUF_BUFG
+    SLICE_X45Y100        FDCE                                         r  bloomfilter/FSM_sequential_lookup_state_reg[2]/C
+                         clock pessimism             -0.290     2.178    
+    SLICE_X45Y100        FDCE (Hold_fdce_C_D)         0.060     2.238    bloomfilter/FSM_sequential_lookup_state_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -2.238    
+                         arrival time                           2.408    
+  -------------------------------------------------------------------
+                         slack                                  0.170    
+
+Slack (MET) :             0.185ns  (arrival time - required time)
+  Source:                 bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[4]/D
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             SYS_CLK
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (SYS_CLK rise@0.000ns - SYS_CLK rise@0.000ns)
+  Data Path Delay:        0.256ns  (logic 0.146ns (56.923%)  route 0.110ns (43.077%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.011ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.540ns
+    Source Clock Delay      (SCD):    2.034ns
+    Clock Pessimism Removal (CPR):    0.494ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock SYS_CLK rise edge)    0.000     0.000 r  
+    AU28                                              0.000     0.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     0.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.134     0.134 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.067     1.201    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.227 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          0.807     2.034    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/SYS_CLK_IBUF_BUFG
+    SLICE_X46Y98         FDCE                                         r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X46Y98         FDCE (Prop_fdce_C_Q)         0.118     2.152 r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[0]/Q
+                         net (fo=8, routed)           0.110     2.263    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/wraddress[0]
+    SLICE_X47Y98         LUT6 (Prop_lut6_I1_O)        0.028     2.291 r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/wptr[4]_i_1/O
+                         net (fo=1, routed)           0.000     2.291    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/wptr[4]_i_1_n_0
+    SLICE_X47Y98         FDCE                                         r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock SYS_CLK rise edge)    0.000     0.000 r  
+    AU28                                              0.000     0.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     0.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.301     0.301 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.139     1.440    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.470 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          1.070     2.540    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/SYS_CLK_IBUF_BUFG
+    SLICE_X47Y98         FDCE                                         r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[4]/C
+                         clock pessimism             -0.494     2.045    
+    SLICE_X47Y98         FDCE (Hold_fdce_C_D)         0.060     2.105    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[4]
+  -------------------------------------------------------------------
+                         required time                         -2.105    
+                         arrival time                           2.291    
+  -------------------------------------------------------------------
+                         slack                                  0.185    
+
+Slack (MET) :             0.187ns  (arrival time - required time)
+  Source:                 pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[4]/D
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             SYS_CLK
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (SYS_CLK rise@0.000ns - SYS_CLK rise@0.000ns)
+  Data Path Delay:        0.288ns  (logic 0.128ns (44.433%)  route 0.160ns (55.567%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.014ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.468ns
+    Source Clock Delay      (SCD):    1.982ns
+    Clock Pessimism Removal (CPR):    0.471ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock SYS_CLK rise edge)    0.000     0.000 r  
+    AU28                                              0.000     0.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     0.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.134     0.134 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.067     1.201    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.227 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          0.755     1.982    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/SYS_CLK_IBUF_BUFG
+    SLICE_X47Y102        FDCE                                         r  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X47Y102        FDCE (Prop_fdce_C_Q)         0.100     2.082 r  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[0]/Q
+                         net (fo=10, routed)          0.160     2.242    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg_n_0_[0]
+    SLICE_X46Y101        LUT6 (Prop_lut6_I2_O)        0.028     2.270 r  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/rptr[4]_i_1__0/O
+                         net (fo=1, routed)           0.000     2.270    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/temp_rptr[4]
+    SLICE_X46Y101        FDCE                                         r  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock SYS_CLK rise edge)    0.000     0.000 r  
+    AU28                                              0.000     0.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     0.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.301     0.301 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.139     1.440    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.470 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          0.998     2.468    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/SYS_CLK_IBUF_BUFG
+    SLICE_X46Y101        FDCE                                         r  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[4]/C
+                         clock pessimism             -0.471     1.996    
+    SLICE_X46Y101        FDCE (Hold_fdce_C_D)         0.087     2.083    pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[4]
+  -------------------------------------------------------------------
+                         required time                         -2.083    
+                         arrival time                           2.270    
+  -------------------------------------------------------------------
+                         slack                                  0.187    
+
+Slack (MET) :             0.187ns  (arrival time - required time)
+  Source:                 bloomfilter/FSM_sequential_lookup_state_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            bloomfilter/count_reg[0]/D
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             SYS_CLK
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (SYS_CLK rise@0.000ns - SYS_CLK rise@0.000ns)
+  Data Path Delay:        0.541ns  (logic 0.128ns (23.650%)  route 0.413ns (76.350%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.267ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.541ns
+    Source Clock Delay      (SCD):    1.983ns
+    Clock Pessimism Removal (CPR):    0.290ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock SYS_CLK rise edge)    0.000     0.000 r  
+    AU28                                              0.000     0.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     0.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.134     0.134 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.067     1.201    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.227 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          0.756     1.983    bloomfilter/SYS_CLK_IBUF_BUFG
+    SLICE_X45Y100        FDCE                                         r  bloomfilter/FSM_sequential_lookup_state_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y100        FDCE (Prop_fdce_C_Q)         0.100     2.083 f  bloomfilter/FSM_sequential_lookup_state_reg[2]/Q
+                         net (fo=16, routed)          0.413     2.497    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/ram2_addr_reg[2]_rep[2]
+    SLICE_X44Y99         LUT6 (Prop_lut6_I0_O)        0.028     2.525 r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/count[0]_i_1/O
+                         net (fo=1, routed)           0.000     2.525    bloomfilter/scfifo_64_16_pkt_fifo_n_107
+    SLICE_X44Y99         FDCE                                         r  bloomfilter/count_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock SYS_CLK rise edge)    0.000     0.000 r  
+    AU28                                              0.000     0.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     0.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.301     0.301 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.139     1.440    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.470 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          1.071     2.541    bloomfilter/SYS_CLK_IBUF_BUFG
+    SLICE_X44Y99         FDCE                                         r  bloomfilter/count_reg[0]/C
+                         clock pessimism             -0.290     2.250    
+    SLICE_X44Y99         FDCE (Hold_fdce_C_D)         0.087     2.337    bloomfilter/count_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -2.337    
+                         arrival time                           2.525    
+  -------------------------------------------------------------------
+                         slack                                  0.187    
+
+Slack (MET) :             0.188ns  (arrival time - required time)
+  Source:                 bloomfilter/count_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            bloomfilter/count_reg[1]/D
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             SYS_CLK
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (SYS_CLK rise@0.000ns - SYS_CLK rise@0.000ns)
+  Data Path Delay:        0.248ns  (logic 0.128ns (51.601%)  route 0.120ns (48.399%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.541ns
+    Source Clock Delay      (SCD):    2.035ns
+    Clock Pessimism Removal (CPR):    0.505ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock SYS_CLK rise edge)    0.000     0.000 r  
+    AU28                                              0.000     0.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     0.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.134     0.134 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.067     1.201    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.227 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          0.808     2.035    bloomfilter/SYS_CLK_IBUF_BUFG
+    SLICE_X45Y99         FDCE                                         r  bloomfilter/count_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y99         FDCE (Prop_fdce_C_Q)         0.100     2.135 r  bloomfilter/count_reg[1]/Q
+                         net (fo=3, routed)           0.120     2.255    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/count_reg[1]_2
+    SLICE_X45Y99         LUT6 (Prop_lut6_I5_O)        0.028     2.283 r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/count[1]_i_1/O
+                         net (fo=1, routed)           0.000     2.283    bloomfilter/scfifo_64_16_pkt_fifo_n_108
+    SLICE_X45Y99         FDCE                                         r  bloomfilter/count_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock SYS_CLK rise edge)    0.000     0.000 r  
+    AU28                                              0.000     0.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     0.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.301     0.301 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.139     1.440    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.470 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          1.071     2.541    bloomfilter/SYS_CLK_IBUF_BUFG
+    SLICE_X45Y99         FDCE                                         r  bloomfilter/count_reg[1]/C
+                         clock pessimism             -0.505     2.035    
+    SLICE_X45Y99         FDCE (Hold_fdce_C_D)         0.060     2.095    bloomfilter/count_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -2.095    
+                         arrival time                           2.283    
+  -------------------------------------------------------------------
+                         slack                                  0.188    
+
+Slack (MET) :             0.190ns  (arrival time - required time)
+  Source:                 bloomfilter/FSM_sequential_lookup_state_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            bloomfilter/FSM_sequential_lookup_state_reg[0]/D
+                            (rising edge-triggered cell FDCE clocked by SYS_CLK  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             SYS_CLK
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (SYS_CLK rise@0.000ns - SYS_CLK rise@0.000ns)
+  Data Path Delay:        0.516ns  (logic 0.156ns (30.227%)  route 0.360ns (69.773%))
+  Logic Levels:           2  (LUT5=1 LUT6=1)
+  Clock Path Skew:        0.266ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.540ns
+    Source Clock Delay      (SCD):    1.983ns
+    Clock Pessimism Removal (CPR):    0.290ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock SYS_CLK rise edge)    0.000     0.000 r  
+    AU28                                              0.000     0.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     0.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.134     0.134 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.067     1.201    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.227 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          0.756     1.983    bloomfilter/SYS_CLK_IBUF_BUFG
+    SLICE_X45Y100        FDCE                                         r  bloomfilter/FSM_sequential_lookup_state_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y100        FDCE (Prop_fdce_C_Q)         0.100     2.083 f  bloomfilter/FSM_sequential_lookup_state_reg[2]/Q
+                         net (fo=16, routed)          0.247     2.331    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/ram2_addr_reg[2]_rep[2]
+    SLICE_X47Y99         LUT6 (Prop_lut6_I5_O)        0.028     2.359 r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/FSM_sequential_lookup_state[0]_i_2/O
+                         net (fo=1, routed)           0.113     2.471    bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/FSM_sequential_lookup_state[0]_i_2_n_0
+    SLICE_X47Y99         LUT5 (Prop_lut5_I0_O)        0.028     2.499 r  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/FSM_sequential_lookup_state[0]_i_1/O
+                         net (fo=1, routed)           0.000     2.499    bloomfilter/lookup_state__0[0]
+    SLICE_X47Y99         FDCE                                         r  bloomfilter/FSM_sequential_lookup_state_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock SYS_CLK rise edge)    0.000     0.000 r  
+    AU28                                              0.000     0.000 r  SYS_CLK (IN)
+                         net (fo=0)                   0.000     0.000    SYS_CLK
+    AU28                 IBUF (Prop_ibuf_I_O)         0.301     0.301 r  SYS_CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.139     1.440    SYS_CLK_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.470 r  SYS_CLK_IBUF_BUFG_inst/O
+                         net (fo=39, routed)          1.070     2.540    bloomfilter/SYS_CLK_IBUF_BUFG
+    SLICE_X47Y99         FDCE                                         r  bloomfilter/FSM_sequential_lookup_state_reg[0]/C
+                         clock pessimism             -0.290     2.249    
+    SLICE_X47Y99         FDCE (Hold_fdce_C_D)         0.060     2.309    bloomfilter/FSM_sequential_lookup_state_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -2.309    
+                         arrival time                           2.499    
+  -------------------------------------------------------------------
+                         slack                                  0.190    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         SYS_CLK
+Waveform(ns):       { 0.000 2.500 }
+Period(ns):         5.000
+Sources:            { SYS_CLK }
+
+Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
+Min Period        n/a     BUFG/I   n/a            1.408         5.000       3.591      BUFGCTRL_X0Y0  SYS_CLK_IBUF_BUFG_inst/I
+Min Period        n/a     FDCE/C   n/a            0.750         5.000       4.250      SLICE_X47Y100  CRC32h_32bit_inst/crcvalid_reg/C
+Min Period        n/a     FDCE/C   n/a            0.750         5.000       4.250      SLICE_X47Y99   bloomfilter/FSM_sequential_lookup_state_reg[1]/C
+Min Period        n/a     FDCE/C   n/a            0.750         5.000       4.250      SLICE_X46Y100  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[2]/C
+Min Period        n/a     FDCE/C   n/a            0.750         5.000       4.250      SLICE_X46Y100  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[4]/C
+Min Period        n/a     FDCE/C   n/a            0.750         5.000       4.250      SLICE_X46Y98   bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[1]/C
+Min Period        n/a     FDCE/C   n/a            0.750         5.000       4.250      SLICE_X46Y98   bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[3]/C
+Min Period        n/a     FDCE/C   n/a            0.750         5.000       4.250      SLICE_X50Y100  pi_sketch/FSM_sequential_lookup_state_reg[2]/C
+Min Period        n/a     FDPE/C   n/a            0.750         5.000       4.250      SLICE_X50Y100  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/Empty_reg_reg/C
+Min Period        n/a     FDCE/C   n/a            0.750         5.000       4.250      SLICE_X47Y102  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[1]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.400         2.500       2.100      SLICE_X47Y99   bloomfilter/FSM_sequential_lookup_state_reg[1]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.400         2.500       2.100      SLICE_X46Y98   bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[1]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.400         2.500       2.100      SLICE_X46Y98   bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[3]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.400         2.500       2.100      SLICE_X50Y100  pi_sketch/FSM_sequential_lookup_state_reg[2]/C
+Low Pulse Width   Fast    FDPE/C   n/a            0.400         2.500       2.100      SLICE_X50Y100  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/Empty_reg_reg/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.400         2.500       2.100      SLICE_X48Y102  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[1]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.400         2.500       2.100      SLICE_X48Y101  pi_sketch/scfifo_65_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[3]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.400         2.500       2.100      SLICE_X47Y100  CRC32h_32bit_inst/crcvalid_reg/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.400         2.500       2.100      SLICE_X47Y99   bloomfilter/FSM_sequential_lookup_state_reg[1]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.400         2.500       2.100      SLICE_X46Y100  bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/rptr_reg[2]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.350         2.500       2.150      SLICE_X47Y99   bloomfilter/FSM_sequential_lookup_state_reg[0]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.350         2.500       2.150      SLICE_X47Y99   bloomfilter/FSM_sequential_lookup_state_reg[1]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.350         2.500       2.150      SLICE_X46Y99   bloomfilter/check_key_rd_reg/C
+High Pulse Width  Slow    FDCE/C   n/a            0.350         2.500       2.150      SLICE_X44Y99   bloomfilter/count_reg[0]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.350         2.500       2.150      SLICE_X45Y99   bloomfilter/count_reg[1]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.350         2.500       2.150      SLICE_X45Y99   bloomfilter/count_reg[2]/C
+High Pulse Width  Slow    FDPE/C   n/a            0.350         2.500       2.150      SLICE_X47Y99   bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/Empty_reg_reg/C
+High Pulse Width  Slow    FDCE/C   n/a            0.350         2.500       2.150      SLICE_X46Y98   bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[0]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.350         2.500       2.150      SLICE_X46Y98   bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[1]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.350         2.500       2.150      SLICE_X46Y98   bloomfilter/scfifo_64_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[2]/C
+
+
+

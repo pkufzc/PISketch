@@ -1,0 +1,407 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Dec 28 18:38:39 2021
+# Process ID: 17184
+# Current directory: D:/PIS_1/PIS_1.runs/synth_1
+# Command line: vivado.exe -log PIS_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source PIS_top.tcl
+# Log file: D:/PIS_1/PIS_1.runs/synth_1/PIS_top.vds
+# Journal file: D:/PIS_1/PIS_1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source PIS_top.tcl -notrace
+Command: synth_design -top PIS_top -part xc7vx690tffg1761-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Device 21-403] Loading part xc7vx690tffg1761-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 15352
+WARNING: [Synth 8-2507] parameter declaration becomes local in PI_Sketch with formal parameter declaration list [D:/PIS_1/PIS_1.srcs/sources_1/new/PI_Sketch.v:84]
+WARNING: [Synth 8-2507] parameter declaration becomes local in PI_Sketch with formal parameter declaration list [D:/PIS_1/PIS_1.srcs/sources_1/new/PI_Sketch.v:93]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1326.242 ; gain = 217.570
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'PIS_top' [D:/PIS_1/PIS_1.srcs/sources_1/new/PIS_top.v:22]
+	Parameter WINDOW_KEY_NUMBER_1 bound to: 6 - type: integer 
+	Parameter INIT_WEIGHT bound to: 5'b01010 
+INFO: [Synth 8-6157] synthesizing module 'CRC32h_32bit' [D:/PIS_1/PIS_1.srcs/sources_1/new/CRC32h_32bit.v:22]
+INFO: [Synth 8-6157] synthesizing module 'CRC32_D32' [D:/PIS_1/PIS_1.srcs/sources_1/new/CRC32_D32.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'CRC32_D32' (1#1) [D:/PIS_1/PIS_1.srcs/sources_1/new/CRC32_D32.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'CRC32h_32bit' (2#1) [D:/PIS_1/PIS_1.srcs/sources_1/new/CRC32h_32bit.v:22]
+INFO: [Synth 8-6157] synthesizing module 'BloomFilter' [D:/PIS_1/PIS_1.srcs/sources_1/new/BloomFilter.v:2]
+	Parameter RAMAddWidth bound to: 10 - type: integer 
+	Parameter DataDepth bound to: 1024 - type: integer 
+	Parameter WINDOW_NUM bound to: 6 - type: integer 
+	Parameter idle_s bound to: 4'b0000 
+	Parameter pharse_1_s bound to: 4'b0001 
+	Parameter pharse_2_s bound to: 4'b0010 
+	Parameter pharse_3_s bound to: 4'b0011 
+	Parameter pharse_4_s bound to: 4'b0100 
+	Parameter wait_1_s bound to: 4'b0101 
+	Parameter wait_2_s bound to: 4'b0110 
+	Parameter read_s bound to: 4'b0111 
+INFO: [Synth 8-6157] synthesizing module 'fifo_top' [D:/PIS_1/PIS_1.srcs/sources_1/new/fifo_top.v:23]
+	Parameter ShowHead bound to: 1 - type: integer 
+	Parameter SynMode bound to: 1 - type: integer 
+	Parameter DataWidth bound to: 64 - type: integer 
+	Parameter DataDepth bound to: 16 - type: integer 
+	Parameter RAMAddWidth bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'SYNCFIFO' [D:/PIS_1/PIS_1.srcs/sources_1/new/SYNCFIFO.v:23]
+	Parameter ShowHead bound to: 1 - type: integer 
+	Parameter DataWidth bound to: 64 - type: integer 
+	Parameter DataDepth bound to: 16 - type: integer 
+	Parameter RAMAddWidth bound to: 4 - type: integer 
+	Parameter AddWidth bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'SYNCFIFO' (3#1) [D:/PIS_1/PIS_1.srcs/sources_1/new/SYNCFIFO.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_top' (4#1) [D:/PIS_1/PIS_1.srcs/sources_1/new/fifo_top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ram_64_16' [D:/PIS_1/PIS_1.runs/synth_1/.Xil/Vivado-17184-LAPTOP-CK74LVEA/realtime/ram_64_16_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ram_64_16' (5#1) [D:/PIS_1/PIS_1.runs/synth_1/.Xil/Vivado-17184-LAPTOP-CK74LVEA/realtime/ram_64_16_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BloomFilter' (6#1) [D:/PIS_1/PIS_1.srcs/sources_1/new/BloomFilter.v:2]
+INFO: [Synth 8-6157] synthesizing module 'PI_Sketch' [D:/PIS_1/PIS_1.srcs/sources_1/new/PI_Sketch.v:23]
+	Parameter RAMAddWidth bound to: 19 - type: integer 
+	Parameter DataDepth bound to: 524288 - type: integer 
+	Parameter SIZEOFWEIGHT bound to: 5'b01010 
+	Parameter WINDOW_NUM bound to: 6 - type: integer 
+	Parameter idle_s bound to: 4'b0000 
+	Parameter pharse_1_s bound to: 4'b0001 
+	Parameter pharse_2_s bound to: 4'b0010 
+	Parameter pharse_3_s bound to: 4'b0011 
+	Parameter pharse_4_s bound to: 4'b0100 
+	Parameter wait_1_s bound to: 4'b0101 
+	Parameter wait_2_s bound to: 4'b0110 
+	Parameter read_s bound to: 4'b0111 
+	Parameter idle_d bound to: 4'b0000 
+	Parameter read_d bound to: 4'b0001 
+	Parameter wait_1_d bound to: 4'b0010 
+	Parameter wait_2_d bound to: 4'b0011 
+	Parameter rec_data_d bound to: 4'b0100 
+	Parameter wait_cs_d bound to: 4'b0101 
+	Parameter inital_d bound to: 4'b0110 
+INFO: [Synth 8-6157] synthesizing module 'fifo_top__parameterized0' [D:/PIS_1/PIS_1.srcs/sources_1/new/fifo_top.v:23]
+	Parameter ShowHead bound to: 1 - type: integer 
+	Parameter SynMode bound to: 1 - type: integer 
+	Parameter DataWidth bound to: 65 - type: integer 
+	Parameter DataDepth bound to: 16 - type: integer 
+	Parameter RAMAddWidth bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'SYNCFIFO__parameterized0' [D:/PIS_1/PIS_1.srcs/sources_1/new/SYNCFIFO.v:23]
+	Parameter ShowHead bound to: 1 - type: integer 
+	Parameter DataWidth bound to: 65 - type: integer 
+	Parameter DataDepth bound to: 16 - type: integer 
+	Parameter RAMAddWidth bound to: 4 - type: integer 
+	Parameter AddWidth bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'SYNCFIFO__parameterized0' (6#1) [D:/PIS_1/PIS_1.srcs/sources_1/new/SYNCFIFO.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_top__parameterized0' (6#1) [D:/PIS_1/PIS_1.srcs/sources_1/new/fifo_top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ram_65_16' [D:/PIS_1/PIS_1.runs/synth_1/.Xil/Vivado-17184-LAPTOP-CK74LVEA/realtime/ram_65_16_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ram_65_16' (7#1) [D:/PIS_1/PIS_1.runs/synth_1/.Xil/Vivado-17184-LAPTOP-CK74LVEA/realtime/ram_65_16_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ASYNCRAM' [D:/PIS_1/PIS_1.srcs/sources_1/new/ASYNCRAM.v:22]
+	Parameter DataWidth bound to: 62 - type: integer 
+	Parameter DataDepth bound to: 524288 - type: integer 
+	Parameter RAMAddWidth bound to: 19 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ASYNCRAM' (8#1) [D:/PIS_1/PIS_1.srcs/sources_1/new/ASYNCRAM.v:22]
+INFO: [Synth 8-6157] synthesizing module 'ram_10_19_62' [D:/PIS_1/PIS_1.runs/synth_1/.Xil/Vivado-17184-LAPTOP-CK74LVEA/realtime/ram_10_19_62_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ram_10_19_62' (9#1) [D:/PIS_1/PIS_1.runs/synth_1/.Xil/Vivado-17184-LAPTOP-CK74LVEA/realtime/ram_10_19_62_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PI_Sketch' (10#1) [D:/PIS_1/PIS_1.srcs/sources_1/new/PI_Sketch.v:23]
+WARNING: [Synth 8-7071] port 'Tab_reset_n' of module 'PI_Sketch' is unconnected for instance 'pi_sketch' [D:/PIS_1/PIS_1.srcs/sources_1/new/PIS_top.v:84]
+WARNING: [Synth 8-7023] instance 'pi_sketch' of module 'PI_Sketch' has 7 connections declared, but only 6 given [D:/PIS_1/PIS_1.srcs/sources_1/new/PIS_top.v:84]
+INFO: [Synth 8-6155] done synthesizing module 'PIS_top' (11#1) [D:/PIS_1/PIS_1.srcs/sources_1/new/PIS_top.v:22]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1404.816 ; gain = 296.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1422.723 ; gain = 314.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1422.723 ; gain = 314.051
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.140 . Memory (MB): peak = 1422.723 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/PIS_1/PIS_1.gen/sources_1/ip/ram_64_16/ram_64_16/ram_64_16_in_context.xdc] for cell 'bloomfilter/ram_64_16_pkt0'
+Finished Parsing XDC File [d:/PIS_1/PIS_1.gen/sources_1/ip/ram_64_16/ram_64_16/ram_64_16_in_context.xdc] for cell 'bloomfilter/ram_64_16_pkt0'
+Parsing XDC File [d:/PIS_1/PIS_1.gen/sources_1/ip/ram_65_16/ram_65_16/ram_65_16_in_context.xdc] for cell 'pi_sketch/ram_65_16_pkt1'
+Finished Parsing XDC File [d:/PIS_1/PIS_1.gen/sources_1/ip/ram_65_16/ram_65_16/ram_65_16_in_context.xdc] for cell 'pi_sketch/ram_65_16_pkt1'
+Parsing XDC File [d:/PIS_1/PIS_1.gen/sources_1/ip/ram_10_19_62/ram_10_19_62/ram_10_19_62_in_context.xdc] for cell 'pi_sketch/hash3'
+Finished Parsing XDC File [d:/PIS_1/PIS_1.gen/sources_1/ip/ram_10_19_62/ram_10_19_62/ram_10_19_62_in_context.xdc] for cell 'pi_sketch/hash3'
+Parsing XDC File [D:/PIS_1/PIS_1.srcs/constrs_1/new/PIS.xdc]
+Finished Parsing XDC File [D:/PIS_1/PIS_1.srcs/constrs_1/new/PIS.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1565.902 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 1565.902 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'bloomfilter/ram_64_16_pkt0' at clock pin 'clka' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'pi_sketch/hash3' at clock pin 'clka' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'pi_sketch/ram_65_16_pkt1' at clock pin 'clka' is different from the actual clock period '5.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1575.949 ; gain = 467.277
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx690tffg1761-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1575.949 ; gain = 467.277
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for bloomfilter/ram_64_16_pkt0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for pi_sketch/ram_65_16_pkt1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for pi_sketch/hash3. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1575.949 ; gain = 467.277
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'lookup_state_reg' in module 'BloomFilter'
+INFO: [Synth 8-802] inferred FSM for state register 'lookup_state_reg' in module 'PI_Sketch'
+WARNING: [Synth 8-327] inferring latch for variable 'ReadData' [D:/PIS_1/PIS_1.srcs/sources_1/new/SYNCFIFO.v:138]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  idle_s |                              000 |                             0000
+              pharse_1_s |                              001 |                             0001
+              pharse_2_s |                              010 |                             0010
+                wait_1_s |                              011 |                             0101
+                  read_s |                              100 |                             0111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'lookup_state_reg' using encoding 'sequential' in module 'BloomFilter'
+WARNING: [Synth 8-327] inferring latch for variable 'ReadData' [D:/PIS_1/PIS_1.srcs/sources_1/new/SYNCFIFO.v:138]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  idle_s |                              000 |                             0000
+              pharse_1_s |                              001 |                             0001
+              pharse_2_s |                              010 |                             0010
+              pharse_3_s |                              011 |                             0011
+              pharse_4_s |                              100 |                             0100
+                wait_1_s |                              101 |                             0101
+                wait_2_s |                              110 |                             0110
+                  read_s |                              111 |                             0111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'lookup_state_reg' using encoding 'sequential' in module 'PI_Sketch'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1575.949 ; gain = 467.277
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 2     
+	   2 Input   16 Bit       Adders := 2     
+	   2 Input   13 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 4     
+	   3 Input    4 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 4     
++---XORs : 
+	   2 Input      1 Bit         XORs := 40    
+	   3 Input      1 Bit         XORs := 8     
+	  15 Input      1 Bit         XORs := 2     
+	  10 Input      1 Bit         XORs := 3     
+	   4 Input      1 Bit         XORs := 2     
+	   9 Input      1 Bit         XORs := 1     
+	   6 Input      1 Bit         XORs := 3     
+	  14 Input      1 Bit         XORs := 2     
+	  16 Input      1 Bit         XORs := 9     
+	  26 Input      1 Bit         XORs := 2     
+	  17 Input      1 Bit         XORs := 3     
+	  13 Input      1 Bit         XORs := 2     
+	   7 Input      1 Bit         XORs := 1     
+	  11 Input      1 Bit         XORs := 2     
+	  12 Input      1 Bit         XORs := 3     
+	  21 Input      1 Bit         XORs := 1     
+	  19 Input      1 Bit         XORs := 2     
+	  20 Input      1 Bit         XORs := 1     
+	  18 Input      1 Bit         XORs := 1     
++---Registers : 
+	             1024 Bit    Registers := 3     
+	               65 Bit    Registers := 4     
+	               64 Bit    Registers := 3     
+	               62 Bit    Registers := 4     
+	               32 Bit    Registers := 2     
+	               19 Bit    Registers := 2     
+	               10 Bit    Registers := 3     
+	                5 Bit    Registers := 4     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   2 Input 1024 Bit        Muxes := 7     
+	   5 Input 1024 Bit        Muxes := 4     
+	   2 Input   65 Bit        Muxes := 1     
+	   5 Input   65 Bit        Muxes := 1     
+	   8 Input   65 Bit        Muxes := 1     
+	   5 Input   64 Bit        Muxes := 1     
+	   2 Input   64 Bit        Muxes := 1     
+	   2 Input   62 Bit        Muxes := 11    
+	   8 Input   62 Bit        Muxes := 1     
+	   5 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 2     
+	   8 Input   32 Bit        Muxes := 1     
+	   8 Input   19 Bit        Muxes := 2     
+	   5 Input   10 Bit        Muxes := 3     
+	   2 Input    5 Bit        Muxes := 12    
+	   5 Input    3 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 10    
+	   8 Input    3 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 8     
+	   4 Input    1 Bit        Muxes := 3     
+	   5 Input    1 Bit        Muxes := 6     
+	   8 Input    1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 3600 (col length:200)
+BRAMs: 2940 (col length: RAMB18 200 RAMB36 100)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7129] Port rdclk in module fifo_top is either unconnected or has no load
+INFO: [Synth 8-3886] merging instance 'ram1_addr_reg[7]' (FDCE) to 'ram2_addr_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ram1_addr_reg[8]' (FDCE) to 'ram2_addr_reg[1]'
+INFO: [Synth 8-3886] merging instance 'ram1_addr_reg[9]' (FDCE) to 'ram2_addr_reg[2]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:55 . Memory (MB): peak = 1575.949 ; gain = 467.277
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:01:00 . Memory (MB): peak = 1575.949 ; gain = 467.277
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:01 ; elapsed = 00:02:26 . Memory (MB): peak = 1805.371 ; gain = 696.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:02 ; elapsed = 00:02:39 . Memory (MB): peak = 1805.371 ; gain = 696.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:06 ; elapsed = 00:02:43 . Memory (MB): peak = 1805.371 ; gain = 696.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:06 ; elapsed = 00:02:43 . Memory (MB): peak = 1805.371 ; gain = 696.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:07 ; elapsed = 00:02:44 . Memory (MB): peak = 1805.371 ; gain = 696.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:07 ; elapsed = 00:02:44 . Memory (MB): peak = 1805.371 ; gain = 696.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:08 ; elapsed = 00:02:44 . Memory (MB): peak = 1805.371 ; gain = 696.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:08 ; elapsed = 00:02:45 . Memory (MB): peak = 1805.371 ; gain = 696.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |ram_64_16     |         1|
+|2     |ram_65_16     |         1|
+|3     |ram_10_19_62  |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |ram_10_19 |     1|
+|2     |ram_64    |     1|
+|3     |ram_65    |     1|
+|4     |BUFG      |     1|
+|5     |CARRY4    |    34|
+|6     |LUT1      |    25|
+|7     |LUT2      |   219|
+|8     |LUT3      |    85|
+|9     |LUT4      |   203|
+|10    |LUT5      |  3311|
+|11    |LUT6      |  4106|
+|12    |MUXF7     |   408|
+|13    |MUXF8     |   204|
+|14    |FDCE      |  3591|
+|15    |FDPE      |   130|
+|16    |FDRE      |    64|
+|17    |LD        |   116|
+|18    |IBUF      |    36|
+|19    |OBUF      |     1|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:08 ; elapsed = 00:02:45 . Memory (MB): peak = 1805.371 ; gain = 696.699
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:00 ; elapsed = 00:02:42 . Memory (MB): peak = 1805.371 ; gain = 543.473
+Synthesis Optimization Complete : Time (s): cpu = 00:02:08 ; elapsed = 00:02:46 . Memory (MB): peak = 1805.371 ; gain = 696.699
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.145 . Memory (MB): peak = 1805.371 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 762 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'PIS_top' is not ideal for floorplanning, since the cellview 'BloomFilter' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 2 inverter(s) to 116 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1805.371 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 116 instances were transformed.
+  LD => LDCE (inverted pins: G): 116 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+47 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:18 ; elapsed = 00:02:56 . Memory (MB): peak = 1805.371 ; gain = 696.699
+INFO: [Common 17-1381] The checkpoint 'D:/PIS_1/PIS_1.runs/synth_1/PIS_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file PIS_top_utilization_synth.rpt -pb PIS_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 28 18:41:42 2021...
